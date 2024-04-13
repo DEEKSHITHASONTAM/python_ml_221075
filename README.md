@@ -59,7 +59,3 @@ This project aims to predict the education level of winners in the recent State 
     - The predictions are saved in a CSV file named `submission.csv`.
     - The file contains two columns: 'ID' and 'Education', where 'Education' is the predicted education level.
 
-## Restrictions
-
-- Only the libraries mentioned in the Rules section are allowed.
-- No deep learning methods/libraries are allowed (e.g., ANN, Pytorch, Keras, Tensorflow).
