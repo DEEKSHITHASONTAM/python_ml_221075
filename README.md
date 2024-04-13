@@ -20,11 +20,14 @@ This project aims to predict the education level of winners in the recent State 
 
 ### Model Selection and Training
 
-1. **Model**: RandomForestClassifier from scikit-learn.
-    - Chose RandomForestClassifier for its ability to handle categorical data and non-linearity in the dataset.
+1. **Model**: K-Nearest Neighbors (KNN) Classifier.
+    - Utilized KNN Classifier from scikit-learn for its simplicity and effectiveness in handling classification tasks.
+
+2. **Pipeline**: 
+    - Created a pipeline that includes preprocessing steps like imputation and scaling followed by the KNN classifier.
   
-2. **Cross-validation**: 
-    - Utilized 5-fold cross-validation for model evaluation to ensure robustness and avoid overfitting.
+3. **Cross-validation**: 
+    - Employed 5-fold cross-validation for model evaluation to ensure robustness and avoid overfitting.
 
 ### Evaluation Metrics
 
@@ -34,7 +37,7 @@ This project aims to predict the education level of winners in the recent State 
 
 - **Pandas**: For data manipulation and analysis.
 - **NumPy**: For numerical computations.
-- **scikit-learn**: For machine learning modeling and evaluation.
+- **scikit-learn**: For machine learning modeling, evaluation, and preprocessing.
 
 ## Usage
 
@@ -43,11 +46,18 @@ This project aims to predict the education level of winners in the recent State 
 
 2. **Execution**: 
     - Run the preprocessing code to clean and encode the data.
-    - Train the RandomForestClassifier model using the encoded data.
+    - Train the KNN model using the encoded data and the defined pipeline.
     - Use cross-validation to evaluate the model and compute the F1-score.
+    - Make predictions on the test data and save the results to a CSV file.
 
 3. **Evaluation**: 
     - Evaluate the model's performance by comparing the predicted F1-score with the actual education levels.
+
+## Output
+
+- **Predictions**: 
+    - The predictions are saved in a CSV file named `submission.csv`.
+    - The file contains two columns: 'ID' and 'Education', where 'Education' is the predicted education level.
 
 ## Restrictions
 
